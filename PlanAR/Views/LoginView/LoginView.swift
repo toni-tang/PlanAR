@@ -56,7 +56,7 @@ struct LoginView: View {
                         .cornerRadius(5)
                 }
                 Spacer()
-            }.border(Color.black)
+            }
         }
     }
 }
