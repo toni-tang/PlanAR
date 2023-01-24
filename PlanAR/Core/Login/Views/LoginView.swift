@@ -16,7 +16,7 @@ struct LoginView: View {
                 Text("PlanAR")
                     .foregroundColor(Color("TextColor"))
                     .font(.system(size: 72))
-                Spacer()
+                
                 HStack{
                     Text("Username:")
                         .font(.system(size: 30))
@@ -26,9 +26,14 @@ struct LoginView: View {
                         .autocorrectionDisabled()
                         .foregroundColor(Color("TextColor"))
                 }
-                    .background(Color("SecondaryColor"))
-                    .cornerRadius(10)
-                    .padding(20)
+                .background(
+                    Rectangle()
+                        .fill(Color("SecondaryColor"))
+                        .frame(width: UIScreen.main.bounds.width - 28, height: 50)
+                        .cornerRadius(10)
+                )
+                .padding(20)
+                
                 HStack{
                     Text("Password:")
                         .font(.system(size: 30))
@@ -36,25 +41,41 @@ struct LoginView: View {
                     SecureField("Enter Password", text: $viewModel.password)
                         .foregroundColor(Color("TextColor"))
                 }
-                    .background(Color("SecondaryColor"))
-                    .cornerRadius(10)
-                    .padding(20)
-                HStack{
+                .background(
+                    Rectangle()
+                        .fill(Color("SecondaryColor"))
+                        .frame(width: UIScreen.main.bounds.width - 28, height: 50)
+                        .cornerRadius(10)
+                )
+                .padding(20)
+                
+                HStack(spacing: 50) {
                     Button("Register") {
-                        print("wow")
+                        
+                    }
+                    .font(.system(size: 24))
+                    .foregroundColor(Color("TextColor"))
+                    .background(
+                        Rectangle()
+                            .fill(Color("SecondaryColor"))
+                            .frame(width: 100, height: 35)
+                            .cornerRadius(10)
+                    )
+                    
+                    Button("Login") {
+                       
                     }
                         .font(.system(size: 24))
                         .foregroundColor(Color("TextColor"))
-                        .background(Color("SecondaryColor"))
-                        .cornerRadius(5)
-                    Button("Login")     {
-                        print("wow")
-                    }
-                        .font(.system(size: 24))
-                        .foregroundColor(Color("TextColor"))
-                        .background(Color("SecondaryColor"))
-                        .cornerRadius(5)
+                        .background(
+                            Rectangle()
+                                .fill(Color("SecondaryColor"))
+                                .frame(width: 100, height: 35)
+                                .cornerRadius(10)
+                        )
                 }
+                .frame(width: UIScreen.main.bounds.width , height: 40)
+                
                 Spacer()
             }
         }

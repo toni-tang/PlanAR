@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		3CF96EF81EE8BD9EF1AE7C92 /* Pods-PlanAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanAR.release.xcconfig"; path = "Target Support Files/Pods-PlanAR/Pods-PlanAR.release.xcconfig"; sourceTree = "<group>"; };
-		A8B368F3297A3E3C00D97C85 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A8B368F3297A3E3C00D97C85 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = PlanAR/Core/Login/ViewModel/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
 		A8EE2292296D03F40080B08F /* PlanAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EE2295296D03F40080B08F /* PlanARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanARApp.swift; sourceTree = "<group>"; };
 		A8EE2297296D03F40080B08F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -47,21 +47,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A8B368F2297A3E1900D97C85 /* LoginView */ = {
+		A8B7CB092980870B00B60CCB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A8EE2295296D03F40080B08F /* PlanARApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A8B7CB0A2980871800B60CCB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A8B7CB0F2980880100B60CCB /* Home */,
+				A8B7CB0C2980878000B60CCB /* Login */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A8B7CB0B2980874100B60CCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8B7CB0C2980878000B60CCB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A8B7CB0E2980879F00B60CCB /* ViewModel */,
+				A8B7CB0D2980879B00B60CCB /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A8B7CB0D2980879B00B60CCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8EE2297296D03F40080B08F /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8B7CB0E2980879F00B60CCB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				A8B368F3297A3E3C00D97C85 /* LoginViewModel.swift */,
-				A8EE2297296D03F40080B08F /* LoginView.swift */,
 			);
-			path = LoginView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A8B368F5297A5D1600D97C85 /* Views */ = {
+		A8B7CB0F2980880100B60CCB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A8B368F2297A3E1900D97C85 /* LoginView */,
+				A8B7CB1129808B4500B60CCB /* ViewModel */,
+				A8B7CB1029808B4100B60CCB /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8B7CB1029808B4100B60CCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A8B7CB1129808B4500B60CCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A8EE2289296D03F40080B08F = {
@@ -85,8 +140,9 @@
 		A8EE2294296D03F40080B08F /* PlanAR */ = {
 			isa = PBXGroup;
 			children = (
-				A8EE2295296D03F40080B08F /* PlanARApp.swift */,
-				A8B368F5297A5D1600D97C85 /* Views */,
+				A8B7CB092980870B00B60CCB /* App */,
+				A8B7CB0A2980871800B60CCB /* Core */,
+				A8B7CB0B2980874100B60CCB /* Models */,
 				A8EE2299296D03F50080B08F /* Assets.xcassets */,
 				A8EE229B296D03F50080B08F /* Preview Content */,
 			);
